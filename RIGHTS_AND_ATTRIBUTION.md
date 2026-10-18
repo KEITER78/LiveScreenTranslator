@@ -11,27 +11,28 @@ LiveScreenTranslator
 Copyright (c) 2026 KEITER78
 ```
 
-本体の公開ライセンスは未指定です。第三者ライブラリのライセンスが、本体コードのライセンスを自動で決めるわけではありません。
+本体の自作Pythonソースと本体文書には [MITライセンス](LICENSE) を適用します。著作権表示と許諾文を保持する条件で、利用・改変・再配布・商用利用を許諾します。第三者ライブラリ、モデル、第三者の許諾文には、それぞれの権利者が定めるライセンスが適用されます。
 
-## README・ヘルプ用の説明例（任意）
+## 使用している第三者ソフトウェアの表示
 
-次の説明文は任意の案内です。ライセンスがこの文言や画面への常時表示を要求しているわけではありません。配布に必要な著作権表示・許諾文は、別途 `THIRD_PARTY_NOTICES.md` と `third_party_licenses/` に保持します。
+本アプリと各提供者の関係を次に示します。第三者の著作権表示・許諾文は、[第三者通知](THIRD_PARTY_NOTICES.md)と[原文フォルダー](third_party_licenses/)に保持します。
 
 ```text
 LiveScreenTranslator は KEITER78 が開発する独立したアプリです。
 翻訳には Meta / Facebook の M2M100 418M を使用します。
 本アプリは各提供者の公式アプリではなく、承認・保証を意味しません。
 翻訳モデルは CTranslate2 INT8 へ変換して使用します。
+GUIには PySide6 / Qt を LGPLv3 の条件で使用します。
 M2M100 と CTranslate2 の MIT ライセンス、その他の第三者ソフトウェアの
 通知・許諾文を THIRD_PARTY_NOTICES.md と third_party_licenses/ に記載しています。
-初回のモデル取得後、翻訳中の文章・画面画像を外部へ送信しません。
+翻訳中の文章・画面画像を外部へ送信しません。
 ```
 
 ## 翻訳モデルと推論
 
 M2M100の[公式モデルカード](https://huggingface.co/facebook/m2m100_418M)はモデルをMITと表示し、元のfairseqプロジェクトの[許諾文](third_party_licenses/m2m100/LICENSE)を保持しています。元の著作権表示は `Copyright (c) Facebook, Inc. and its affiliates.` です。モデルを配布する際はMIT全文を添付し、取得元と版、INT8変換の記録も保持します。モデルは既定のGitHubソース配布には含めません。
 
-[CTranslate2](third_party_licenses/ctranslate2/LICENSE)もMITです。再配布時は元の著作権・許諾・免責文を保持します。モデル準備に使うTransformers等の元文書も保存しています。現行依存は[固定版一覧](THIRD_PARTY_NOTICES.md)に記載しています。
+[CTranslate2](third_party_licenses/ctranslate2/LICENSE)もMITです。再配布時は元の著作権・許諾・免責文を保持します。モデル準備に使うTransformers等の元文書も保存しています。依存パッケージは[固定版一覧](THIRD_PARTY_NOTICES.md)に記載しています。
 
 ### 翻訳画面へのクレジット表示は不要
 
@@ -43,11 +44,15 @@ M2M100のMITライセンスと[CTranslate2 v4.6.0のMITライセンス原文](ht
 
 Tesseractと[公式tessdata_fast 4.1.0](https://github.com/tesseract-ocr/tessdata_fast/tree/4.1.0)はApache 2.0です。必要な言語データだけ取得し、言語モデルをGitHubソースに含めません。再配布時は原文、該当するNOTICE、改変表示等を保持します。Tesseract実行ファイルは外部のインストールを使用します。
 
-EasyOCR本体はApache 2.0です。学習済み重みの同梱再配布まで全権利を確認した扱いにはせず、現在も重みは公開物から除外しています。
+EasyOCR本体はApache 2.0です。学習済み重みは利用者の環境で初回に取得し、このリポジトリのソース配布には含めません。
 
-PySide6 / Qt / shiboken6はLGPL等の選択条件に従います。[Qt公式の義務](https://www.qt.io/development/open-source-lgpl-obligations)を確認し、Qtバイナリを配布する場合は、告知だけでなく、適用する対応ソースや差し替え・再リンク等の条件も満たします。MPLの対象部品を配布する場合もソースの入手方法等を示します。
+GUIにはPySide6 / shiboken6と、QtCore・QtGui・QtWidgetsをLGPLv3の条件で使用します。本体はこれらのライブラリを動的に読み込み、ライブラリ自体は改変しません。元の許諾文は[LGPLv3](third_party_licenses/common/LGPL-3.0.txt)と、同ライセンスが参照する[GPLv3](third_party_licenses/common/GPL-3.0.txt)です。選択可能な許諾と上流ソースは[Qtの説明](third_party_licenses/README.md)に記載しています。
 
-NumPy / SciPy / OpenCV / Pillow / PyTorchなどの同梱部品には別の条件があります。実行ファイルにまとめる場合、Python、DLL、OpenMP、数値計算・画像処理ライブラリ等の実際の構成に対応した通知を用意します。元文書のコピーだけでバイナリ配布の全義務が完了したとは扱いません。
+## 配布するファイルと再配布時の条件
+
+このリポジトリには本体ソース、本体文書、依存パッケージ一覧、第三者ライセンス文書を含めます。ライブラリ本体・DLL、Python本体、翻訳・OCRモデル、フォントは同梱しません。
+
+ライブラリやモデルを同梱して再配布する場合は、実際に含めた部品の許諾条件に従います。Qt等のLGPL対象バイナリでは、著作権・ライセンスの告知に加え、対応ソースの提供、ライブラリの差し替え・再リンク等の条件があります。[Qt公式の義務](https://www.qt.io/development/open-source-lgpl-obligations)に詳細があります。MPL対象部品では対象ソースの入手方法を示します。NumPy / SciPy / OpenCV / Pillow / PyTorch等が内包する部品にも各原文の条件が適用されます。
 
 OSのフォントは名前で参照するだけで、フォントファイルは同梱しません。画面の文章を翻訳できることは、第三者の画面や翻訳結果を無条件で転載・再配布できるという意味ではありません。
 

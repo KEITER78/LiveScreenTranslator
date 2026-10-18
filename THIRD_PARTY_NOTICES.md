@@ -9,8 +9,8 @@
 | M2M100 418M | Facebook, Inc. and its affiliates / MIT。[公式モデルカード](https://huggingface.co/facebook/m2m100_418M) と [元の許諾文](third_party_licenses/m2m100/LICENSE)。INT8 へ変換したモデルには取得元・版・改変内容を ready.json に記録。重みは GitHub のソースには含めない |
 | CTranslate2 4.6.0 | OpenNMT / MIT。[元の許諾文](third_party_licenses/ctranslate2/LICENSE)。実行用バイナリの内包部品は個別の条件にも従う |
 | Tesseract / tessdata_fast | Apache-2.0。[本体](https://github.com/tesseract-ocr/tesseract/blob/main/LICENSE) / [公式言語データ](https://github.com/tesseract-ocr/tessdata_fast/blob/4.1.0/LICENSE)。必要な言語データだけ公式 4.1.0 から取得。本体の実行ファイルは外部インストールを利用 |
-| EasyOCR 1.7.2 | Apache-2.0。[元の許諾文](third_party_licenses/easyocr/LICENSE)。選択時だけ初期化。モデルの同梱再配布は今回の対象に含めない |
-| PySide6 / Qt / shiboken6 | LGPL / GPL 等または商用の選択条件。[Qt の案内](https://www.qt.io/development/open-source-lgpl-obligations) と [補足](third_party_licenses/README.md)。ソース利用と Qt バイナリ配布の義務は区別する |
+| EasyOCR 1.7.2 | Apache-2.0。[元の許諾文](third_party_licenses/easyocr/LICENSE)。選択時だけ初期化。認識モデルは利用者の環境で初回取得し、ソース配布には同梱しない |
+| PySide6 / Qt / shiboken6 | 本アプリではQtCore・QtGui・QtWidgetsをLGPLv3の条件で利用。[LGPLv3原文](third_party_licenses/common/LGPL-3.0.txt) / [参照するGPLv3原文](third_party_licenses/common/GPL-3.0.txt) / [Qtの案内](https://www.qt.io/development/open-source-lgpl-obligations) / [上流ソースと補足](third_party_licenses/README.md) |
 
 ## 固定版パッケージ
 
