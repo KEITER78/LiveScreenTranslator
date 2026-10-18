@@ -1,0 +1,805 @@
+{
+  "audited_on": "2026-10-19",
+  "scope": "Local M2M100 INT8, source publication; installed runtime and model preparation dependencies. Binary bundles need a separate component audit.",
+  "packages": [
+    {
+      "name": "certifi",
+      "version": "2026.10.18",
+      "license_summary": "MPL-2.0",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "certifi-2026.10.18.dist-info/licenses/LICENSE"
+      ],
+      "project_urls": [
+        "Source, https://github.com/certifi/python-certifi"
+      ],
+      "pypi": "https://pypi.org/project/certifi/2026.10.18/",
+      "copied_license_files": [
+        "third_party_licenses/certifi/licenses/LICENSE"
+      ]
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.2",
+      "license_summary": "MIT",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "charset_normalizer-3.5.2.dist-info/licenses/LICENSE"
+      ],
+      "project_urls": [
+        "Changelog, https://github.com/jawah/charset_normalizer/blob/master/CHANGELOG.md",
+        "Documentation, https://charset-normalizer.readthedocs.io/",
+        "Code, https://github.com/jawah/charset_normalizer",
+        "Issue tracker, https://github.com/jawah/charset_normalizer/issues"
+      ],
+      "pypi": "https://pypi.org/project/charset-normalizer/3.5.2/",
+      "copied_license_files": [
+        "third_party_licenses/charset-normalizer/licenses/LICENSE"
+      ]
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6",
+      "license_summary": "BSD-3-Clause",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "colorama-0.4.6.dist-info/licenses/LICENSE.txt"
+      ],
+      "project_urls": [
+        "Homepage, https://github.com/tartley/colorama"
+      ],
+      "pypi": "https://pypi.org/project/colorama/0.4.6/",
+      "copied_license_files": [
+        "third_party_licenses/colorama/licenses/LICENSE.txt"
+      ]
+    },
+    {
+      "name": "ctranslate2",
+      "version": "4.6.0",
+      "license_summary": "MIT; bundled native dependencies have additional terms",
+      "source_of_summary": "Installed metadata and official tagged upstream LICENSE; native bundled components need a separate distribution audit.",
+      "license_files": [],
+      "project_urls": [
+        "Documentation, https://opennmt.net/CTranslate2",
+        "Forum, https://forum.opennmt.net",
+        "Gitter, https://gitter.im/OpenNMT/CTranslate2",
+        "Source, https://github.com/OpenNMT/CTranslate2"
+      ],
+      "pypi": "https://pypi.org/project/ctranslate2/4.6.0/",
+      "copied_license_files": [
+        "third_party_licenses/ctranslate2/LICENSE"
+      ]
+    },
+    {
+      "name": "easyocr",
+      "version": "1.7.2",
+      "license_summary": "Apache-2.0",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "easyocr-1.7.2.dist-info/LICENSE"
+      ],
+      "project_urls": [],
+      "pypi": "https://pypi.org/project/easyocr/1.7.2/",
+      "copied_license_files": [
+        "third_party_licenses/easyocr/LICENSE"
+      ]
+    },
+    {
+      "name": "filelock",
+      "version": "4.1.0",
+      "license_summary": "MIT",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "filelock-4.1.0.dist-info/licenses/LICENSE"
+      ],
+      "project_urls": [
+        "Documentation, https://py-filelock.readthedocs.io",
+        "Homepage, https://github.com/tox-dev/py-filelock",
+        "Source, https://github.com/tox-dev/py-filelock",
+        "Tracker, https://github.com/tox-dev/py-filelock/issues"
+      ],
+      "pypi": "https://pypi.org/project/filelock/4.1.0/",
+      "copied_license_files": [
+        "third_party_licenses/filelock/licenses/LICENSE"
+      ]
+    },
+    {
+      "name": "fsspec",
+      "version": "2026.9.0",
+      "license_summary": "BSD-3-Clause",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "fsspec-2026.9.0.dist-info/licenses/LICENSE"
+      ],
+      "project_urls": [
+        "Changelog, https://filesystem-spec.readthedocs.io/en/latest/changelog.html",
+        "Documentation, https://filesystem-spec.readthedocs.io/en/latest/",
+        "Homepage, https://github.com/fsspec/filesystem_spec"
+      ],
+      "pypi": "https://pypi.org/project/fsspec/2026.9.0/",
+      "copied_license_files": [
+        "third_party_licenses/fsspec/licenses/LICENSE"
+      ]
+    },
+    {
+      "name": "huggingface_hub",
+      "version": "0.36.2",
+      "license_summary": "Apache-2.0",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "huggingface_hub-0.36.2.dist-info/licenses/LICENSE"
+      ],
+      "project_urls": [],
+      "pypi": "https://pypi.org/project/huggingface_hub/0.36.2/",
+      "copied_license_files": [
+        "third_party_licenses/huggingface-hub/licenses/LICENSE"
+      ]
+    },
+    {
+      "name": "idna",
+      "version": "2.10",
+      "license_summary": "BSD-3-Clause",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "idna-2.10.dist-info/LICENSE.rst"
+      ],
+      "project_urls": [],
+      "pypi": "https://pypi.org/project/idna/2.10/",
+      "copied_license_files": [
+        "third_party_licenses/idna/LICENSE.rst"
+      ]
+    },
+    {
+      "name": "ImageIO",
+      "version": "2.38.0",
+      "license_summary": "BSD-2-Clause",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "imageio-2.38.0.dist-info/licenses/LICENSE"
+      ],
+      "project_urls": [
+        "homepage, https://github.com/imageio/imageio",
+        "download, http://pypi.python.org/pypi/imageio",
+        "source, https://github.com/imageio/imageio",
+        "documentation, https://imageio.readthedocs.io"
+      ],
+      "pypi": "https://pypi.org/project/ImageIO/2.38.0/",
+      "copied_license_files": [
+        "third_party_licenses/imageio/licenses/LICENSE"
+      ]
+    },
+    {
+      "name": "Jinja2",
+      "version": "3.1.6",
+      "license_summary": "BSD-3-Clause",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "jinja2-3.1.6.dist-info/licenses/LICENSE.txt"
+      ],
+      "project_urls": [
+        "Changes, https://jinja.palletsprojects.com/changes/",
+        "Chat, https://discord.gg/pallets",
+        "Documentation, https://jinja.palletsprojects.com/",
+        "Donate, https://palletsprojects.com/donate",
+        "Source, https://github.com/pallets/jinja/"
+      ],
+      "pypi": "https://pypi.org/project/Jinja2/3.1.6/",
+      "copied_license_files": [
+        "third_party_licenses/jinja2/licenses/LICENSE.txt"
+      ]
+    },
+    {
+      "name": "lazy-loader",
+      "version": "0.6",
+      "license_summary": "BSD-3-Clause",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "lazy_loader-0.6.dist-info/licenses/LICENSE.md"
+      ],
+      "project_urls": [
+        "Home, https://scientific-python.org/specs/spec-0001/",
+        "Source, https://github.com/scientific-python/lazy-loader"
+      ],
+      "pypi": "https://pypi.org/project/lazy-loader/0.6/",
+      "copied_license_files": [
+        "third_party_licenses/lazy-loader/licenses/LICENSE.md"
+      ]
+    },
+    {
+      "name": "MarkupSafe",
+      "version": "3.0.4",
+      "license_summary": "BSD-3-Clause",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "markupsafe-3.0.4.dist-info/licenses/LICENSE.txt"
+      ],
+      "project_urls": [
+        "Donate, https://palletsprojects.com/donate",
+        "Documentation, https://markupsafe.palletsprojects.com/",
+        "Changes, https://markupsafe.palletsprojects.com/page/changes/",
+        "Source, https://github.com/pallets/markupsafe/",
+        "Chat, https://discord.gg/pallets"
+      ],
+      "pypi": "https://pypi.org/project/MarkupSafe/3.0.4/",
+      "copied_license_files": [
+        "third_party_licenses/markupsafe/licenses/LICENSE.txt"
+      ]
+    },
+    {
+      "name": "mpmath",
+      "version": "1.3.0",
+      "license_summary": "BSD-3-Clause",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "mpmath-1.3.0.dist-info/LICENSE"
+      ],
+      "project_urls": [
+        "Source, https://github.com/fredrik-johansson/mpmath",
+        "Tracker, https://github.com/fredrik-johansson/mpmath/issues",
+        "Documentation, http://mpmath.org/doc/current/"
+      ],
+      "pypi": "https://pypi.org/project/mpmath/1.3.0/",
+      "copied_license_files": [
+        "third_party_licenses/mpmath/LICENSE"
+      ]
+    },
+    {
+      "name": "networkx",
+      "version": "3.4.2",
+      "license_summary": "BSD-3-Clause",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "networkx-3.4.2.dist-info/LICENSE.txt"
+      ],
+      "project_urls": [
+        "Homepage, https://networkx.org/",
+        "Bug Tracker, https://github.com/networkx/networkx/issues",
+        "Documentation, https://networkx.org/documentation/stable/",
+        "Source Code, https://github.com/networkx/networkx"
+      ],
+      "pypi": "https://pypi.org/project/networkx/3.4.2/",
+      "copied_license_files": [
+        "third_party_licenses/networkx/LICENSE.txt"
+      ]
+    },
+    {
+      "name": "ninja",
+      "version": "1.13.2",
+      "license_summary": "Apache-2.0",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "ninja-1.13.2.dist-info/licenses/LICENSE_Apache_20"
+      ],
+      "project_urls": [
+        "Bug Tracker, https://github.com/scikit-build/ninja-python-distributions/issues",
+        "Documentation, https://github.com/scikit-build/ninja-python-distributions#readme",
+        "Download, https://github.com/ninja-build/ninja/releases",
+        "Homepage, http://ninja-build.org/",
+        "Mailing list, https://groups.google.com/forum/#!forum/scikit-build",
+        "Source Code, https://github.com/scikit-build/ninja-python-distributions"
+      ],
+      "pypi": "https://pypi.org/project/ninja/1.13.2/",
+      "copied_license_files": [
+        "third_party_licenses/ninja/licenses/LICENSE_Apache_20"
+      ]
+    },
+    {
+      "name": "numpy",
+      "version": "1.26.4",
+      "license_summary": "BSD-3-Clause; bundled libraries have additional terms",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "numpy-1.26.4.dist-info/LICENSE.txt",
+        "numpy/core/include/numpy/random/LICENSE.txt",
+        "numpy/ma/LICENSE",
+        "numpy/random/LICENSE.md"
+      ],
+      "project_urls": [
+        "Homepage, https://numpy.org",
+        "Documentation, https://numpy.org/doc/",
+        "Source, https://github.com/numpy/numpy",
+        "Download, https://pypi.org/project/numpy/#files",
+        "Tracker, https://github.com/numpy/numpy/issues",
+        "Release notes, https://numpy.org/doc/stable/release"
+      ],
+      "pypi": "https://pypi.org/project/numpy/1.26.4/",
+      "copied_license_files": [
+        "third_party_licenses/numpy/LICENSE.txt",
+        "third_party_licenses/numpy/core/include/numpy/random/LICENSE.txt",
+        "third_party_licenses/numpy/ma/LICENSE",
+        "third_party_licenses/numpy/random/LICENSE.md"
+      ]
+    },
+    {
+      "name": "opencv-python-headless",
+      "version": "4.11.0.86",
+      "license_summary": "MIT wrapper; Apache-2.0 OpenCV; bundled libraries have additional terms",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "opencv_python_headless-4.11.0.86.dist-info/LICENSE-3RD-PARTY.txt",
+        "opencv_python_headless-4.11.0.86.dist-info/LICENSE.txt"
+      ],
+      "project_urls": [],
+      "pypi": "https://pypi.org/project/opencv-python-headless/4.11.0.86/",
+      "copied_license_files": [
+        "third_party_licenses/opencv-python-headless/LICENSE-3RD-PARTY.txt",
+        "third_party_licenses/opencv-python-headless/LICENSE.txt"
+      ]
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "license_summary": "Apache-2.0 OR BSD-2-Clause",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "packaging-26.3.dist-info/licenses/LICENSE",
+        "packaging-26.3.dist-info/licenses/LICENSE.APACHE",
+        "packaging-26.3.dist-info/licenses/LICENSE.BSD"
+      ],
+      "project_urls": [
+        "Documentation, https://packaging.pypa.io/",
+        "Source, https://github.com/pypa/packaging"
+      ],
+      "pypi": "https://pypi.org/project/packaging/26.3/",
+      "copied_license_files": [
+        "third_party_licenses/packaging/licenses/LICENSE",
+        "third_party_licenses/packaging/licenses/LICENSE.APACHE",
+        "third_party_licenses/packaging/licenses/LICENSE.BSD"
+      ]
+    },
+    {
+      "name": "pillow",
+      "version": "10.4.0",
+      "license_summary": "HPND; bundled libraries have additional terms",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "pillow-10.4.0.dist-info/LICENSE"
+      ],
+      "project_urls": [
+        "Changelog, https://github.com/python-pillow/Pillow/blob/main/CHANGES.rst",
+        "Documentation, https://pillow.readthedocs.io",
+        "Funding, https://tidelift.com/subscription/pkg/pypi-pillow?utm_source=pypi-pillow&utm_medium=pypi",
+        "Homepage, https://python-pillow.org",
+        "Mastodon, https://fosstodon.org/@pillow",
+        "Release notes, https://pillow.readthedocs.io/en/stable/releasenotes/index.html",
+        "Source, https://github.com/python-pillow/Pillow"
+      ],
+      "pypi": "https://pypi.org/project/pillow/10.4.0/",
+      "copied_license_files": [
+        "third_party_licenses/pillow/LICENSE"
+      ]
+    },
+    {
+      "name": "pyclipper",
+      "version": "1.4.0",
+      "license_summary": "MIT",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "pyclipper-1.4.0.dist-info/licenses/LICENSE"
+      ],
+      "project_urls": [],
+      "pypi": "https://pypi.org/project/pyclipper/1.4.0/",
+      "copied_license_files": [
+        "third_party_licenses/pyclipper/licenses/LICENSE"
+      ]
+    },
+    {
+      "name": "PySide6",
+      "version": "6.9.2",
+      "license_summary": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [],
+      "project_urls": [
+        "Homepage, https://pyside.org",
+        "Documentation, https://doc.qt.io/qtforpython",
+        "Repository, https://code.qt.io/cgit/pyside/pyside-setup.git/",
+        "Changelog, https://code.qt.io/cgit/pyside/pyside-setup.git/tree/doc/changelogs",
+        "Tracker, https://bugreports.qt.io/projects/PYSIDE"
+      ],
+      "pypi": "https://pypi.org/project/PySide6/6.9.2/",
+      "copied_license_files": []
+    },
+    {
+      "name": "PySide6_Addons",
+      "version": "6.9.2",
+      "license_summary": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [],
+      "project_urls": [
+        "Homepage, https://pyside.org",
+        "Documentation, https://doc.qt.io/qtforpython",
+        "Repository, https://code.qt.io/cgit/pyside/pyside-setup.git/",
+        "Changelog, https://code.qt.io/cgit/pyside/pyside-setup.git/tree/doc/changelogs",
+        "Tracker, https://bugreports.qt.io/projects/PYSIDE"
+      ],
+      "pypi": "https://pypi.org/project/PySide6_Addons/6.9.2/",
+      "copied_license_files": []
+    },
+    {
+      "name": "PySide6_Essentials",
+      "version": "6.9.2",
+      "license_summary": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [],
+      "project_urls": [
+        "Homepage, https://pyside.org",
+        "Documentation, https://doc.qt.io/qtforpython",
+        "Repository, https://code.qt.io/cgit/pyside/pyside-setup.git/",
+        "Changelog, https://code.qt.io/cgit/pyside/pyside-setup.git/tree/doc/changelogs",
+        "Tracker, https://bugreports.qt.io/projects/PYSIDE"
+      ],
+      "pypi": "https://pypi.org/project/PySide6_Essentials/6.9.2/",
+      "copied_license_files": []
+    },
+    {
+      "name": "pytesseract",
+      "version": "0.3.13",
+      "license_summary": "Apache-2.0",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "pytesseract-0.3.13.dist-info/LICENSE"
+      ],
+      "project_urls": [],
+      "pypi": "https://pypi.org/project/pytesseract/0.3.13/",
+      "copied_license_files": [
+        "third_party_licenses/pytesseract/LICENSE"
+      ]
+    },
+    {
+      "name": "python-bidi",
+      "version": "0.6.11",
+      "license_summary": "LGPL-3.0-or-later; third-party terms",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "python_bidi-0.6.11.dist-info/licenses/AUTHORS.rst",
+        "python_bidi-0.6.11.dist-info/licenses/COPYING",
+        "python_bidi-0.6.11.dist-info/licenses/COPYING.LESSER",
+        "python_bidi-0.6.11.dist-info/licenses/LICENSE-THIRD-PARTY.yml"
+      ],
+      "project_urls": [
+        "Changelog, https://github.com/MeirKriheli/python-bidi/blob/master/CHANGELOG.rst",
+        "Documentation, https://python-bidi.readthedocs.io/en/latest/",
+        "Homepage, https://github.com/MeirKriheli/python-bidi",
+        "Issues, https://github.com/MeirKriheli/python-bidi/issues",
+        "Repository, https://github.com/MeirKriheli/python-bidi"
+      ],
+      "pypi": "https://pypi.org/project/python-bidi/0.6.11/",
+      "copied_license_files": [
+        "third_party_licenses/python-bidi/licenses/AUTHORS.rst",
+        "third_party_licenses/python-bidi/licenses/COPYING",
+        "third_party_licenses/python-bidi/licenses/COPYING.LESSER",
+        "third_party_licenses/python-bidi/licenses/LICENSE-THIRD-PARTY.yml"
+      ]
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "license_summary": "MIT",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "pyyaml-6.0.3.dist-info/licenses/LICENSE"
+      ],
+      "project_urls": [
+        "Bug Tracker, https://github.com/yaml/pyyaml/issues",
+        "CI, https://github.com/yaml/pyyaml/actions",
+        "Documentation, https://pyyaml.org/wiki/PyYAMLDocumentation",
+        "Mailing lists, http://lists.sourceforge.net/lists/listinfo/yaml-core",
+        "Source Code, https://github.com/yaml/pyyaml"
+      ],
+      "pypi": "https://pypi.org/project/PyYAML/6.0.3/",
+      "copied_license_files": [
+        "third_party_licenses/pyyaml/licenses/LICENSE"
+      ]
+    },
+    {
+      "name": "regex",
+      "version": "2026.9.29",
+      "license_summary": "Apache-2.0 AND CNRI-Python",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "regex-2026.9.29.dist-info/licenses/LICENSE.txt"
+      ],
+      "project_urls": [
+        "Homepage, https://github.com/mrabarnett/mrab-regex"
+      ],
+      "pypi": "https://pypi.org/project/regex/2026.9.29/",
+      "copied_license_files": [
+        "third_party_licenses/regex/licenses/LICENSE.txt"
+      ]
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2",
+      "license_summary": "Apache-2.0",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "requests-2.34.2.dist-info/licenses/LICENSE",
+        "requests-2.34.2.dist-info/licenses/NOTICE"
+      ],
+      "project_urls": [
+        "Documentation, https://requests.readthedocs.io",
+        "Source, https://github.com/psf/requests"
+      ],
+      "pypi": "https://pypi.org/project/requests/2.34.2/",
+      "copied_license_files": [
+        "third_party_licenses/requests/licenses/LICENSE",
+        "third_party_licenses/requests/licenses/NOTICE"
+      ]
+    },
+    {
+      "name": "safetensors",
+      "version": "0.8.0",
+      "license_summary": "Apache-2.0",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "safetensors-0.8.0.dist-info/licenses/LICENSE"
+      ],
+      "project_urls": [
+        "Homepage, https://github.com/huggingface/safetensors",
+        "Source, https://github.com/huggingface/safetensors"
+      ],
+      "pypi": "https://pypi.org/project/safetensors/0.8.0/",
+      "copied_license_files": [
+        "third_party_licenses/safetensors/licenses/LICENSE"
+      ]
+    },
+    {
+      "name": "scikit-image",
+      "version": "0.25.2",
+      "license_summary": "BSD-3-Clause; per-file terms in LICENSE.txt",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "scikit_image-0.25.2.dist-info/LICENSE.txt"
+      ],
+      "project_urls": [
+        "homepage, https://scikit-image.org",
+        "documentation, https://scikit-image.org/docs/stable",
+        "source, https://github.com/scikit-image/scikit-image",
+        "download, https://pypi.org/project/scikit-image/#files",
+        "tracker, https://github.com/scikit-image/scikit-image/issues"
+      ],
+      "pypi": "https://pypi.org/project/scikit-image/0.25.2/",
+      "copied_license_files": [
+        "third_party_licenses/scikit-image/LICENSE.txt"
+      ]
+    },
+    {
+      "name": "scipy",
+      "version": "1.15.3",
+      "license_summary": "BSD-3-Clause; bundled libraries have additional terms",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "scipy-1.15.3.dist-info/LICENSE.txt",
+        "scipy/_lib/_uarray/LICENSE",
+        "scipy/fft/_pocketfft/LICENSE.md",
+        "scipy/sparse/linalg/_eigen/arpack/COPYING",
+        "scipy/spatial/qhull_src/COPYING.txt"
+      ],
+      "project_urls": [
+        "homepage, https://scipy.org/",
+        "documentation, https://docs.scipy.org/doc/scipy/",
+        "source, https://github.com/scipy/scipy",
+        "download, https://github.com/scipy/scipy/releases",
+        "tracker, https://github.com/scipy/scipy/issues"
+      ],
+      "pypi": "https://pypi.org/project/scipy/1.15.3/",
+      "copied_license_files": [
+        "third_party_licenses/scipy/LICENSE.txt",
+        "third_party_licenses/scipy/_lib/_uarray/LICENSE",
+        "third_party_licenses/scipy/fft/_pocketfft/LICENSE.md",
+        "third_party_licenses/scipy/sparse/linalg/_eigen/arpack/COPYING",
+        "third_party_licenses/scipy/spatial/qhull_src/COPYING.txt"
+      ]
+    },
+    {
+      "name": "sentencepiece",
+      "version": "0.2.0",
+      "license_summary": "Apache-2.0",
+      "source_of_summary": "Installed metadata and official tagged upstream LICENSE; native bundled components need a separate distribution audit.",
+      "license_files": [],
+      "project_urls": [],
+      "pypi": "https://pypi.org/project/sentencepiece/0.2.0/",
+      "copied_license_files": [
+        "third_party_licenses/sentencepiece/LICENSE"
+      ]
+    },
+    {
+      "name": "shapely",
+      "version": "2.1.2",
+      "license_summary": "BSD-3-Clause; bundled GEOS LGPL-2.1",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "shapely-2.1.2.dist-info/licenses/LICENSE.txt",
+        "shapely-2.1.2.dist-info/licenses/LICENSE_GEOS",
+        "shapely-2.1.2.dist-info/licenses/LICENSE_win32"
+      ],
+      "project_urls": [
+        "Documentation, https://shapely.readthedocs.io/",
+        "Repository, https://github.com/shapely/shapely"
+      ],
+      "pypi": "https://pypi.org/project/shapely/2.1.2/",
+      "copied_license_files": [
+        "third_party_licenses/shapely/licenses/LICENSE.txt",
+        "third_party_licenses/shapely/licenses/LICENSE_GEOS",
+        "third_party_licenses/shapely/licenses/LICENSE_win32"
+      ]
+    },
+    {
+      "name": "shiboken6",
+      "version": "6.9.2",
+      "license_summary": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [],
+      "project_urls": [
+        "Homepage, https://pyside.org",
+        "Documentation, https://doc.qt.io/qtforpython",
+        "Repository, https://code.qt.io/cgit/pyside/pyside-setup.git/",
+        "Changelog, https://code.qt.io/cgit/pyside/pyside-setup.git/tree/doc/changelogs",
+        "Tracker, https://bugreports.qt.io/projects/PYSIDE"
+      ],
+      "pypi": "https://pypi.org/project/shiboken6/6.9.2/",
+      "copied_license_files": []
+    },
+    {
+      "name": "sympy",
+      "version": "1.14.0",
+      "license_summary": "BSD-3-Clause; third-party terms",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "sympy-1.14.0.dist-info/licenses/AUTHORS",
+        "sympy-1.14.0.dist-info/licenses/LICENSE",
+        "sympy/parsing/latex/LICENSE.txt"
+      ],
+      "project_urls": [
+        "Source, https://github.com/sympy/sympy"
+      ],
+      "pypi": "https://pypi.org/project/sympy/1.14.0/",
+      "copied_license_files": [
+        "third_party_licenses/sympy/licenses/AUTHORS",
+        "third_party_licenses/sympy/licenses/LICENSE",
+        "third_party_licenses/sympy/parsing/latex/LICENSE.txt"
+      ]
+    },
+    {
+      "name": "tifffile",
+      "version": "2025.5.10",
+      "license_summary": "BSD-3-Clause",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "tifffile-2025.5.10.dist-info/licenses/LICENSE"
+      ],
+      "project_urls": [
+        "Bug Tracker, https://github.com/cgohlke/tifffile/issues",
+        "Source Code, https://github.com/cgohlke/tifffile"
+      ],
+      "pypi": "https://pypi.org/project/tifffile/2025.5.10/",
+      "copied_license_files": [
+        "third_party_licenses/tifffile/licenses/LICENSE"
+      ]
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.19.1",
+      "license_summary": "Apache-2.0",
+      "source_of_summary": "Installed metadata and official tagged upstream LICENSE; native bundled components need a separate distribution audit.",
+      "license_files": [],
+      "project_urls": [
+        "Homepage, https://github.com/huggingface/tokenizers",
+        "Source, https://github.com/huggingface/tokenizers"
+      ],
+      "pypi": "https://pypi.org/project/tokenizers/0.19.1/",
+      "copied_license_files": [
+        "third_party_licenses/tokenizers/LICENSE"
+      ]
+    },
+    {
+      "name": "torch",
+      "version": "2.8.0+cpu",
+      "license_summary": "BSD-3-Clause; LICENSE and NOTICE include third-party terms",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "torch-2.8.0+cpu.dist-info/LICENSE",
+        "torch-2.8.0+cpu.dist-info/NOTICE"
+      ],
+      "project_urls": [
+        "Homepage, https://pytorch.org/",
+        "Documentation, https://pytorch.org/docs/",
+        "Source, https://github.com/pytorch/pytorch",
+        "Forum, https://discuss.pytorch.org/"
+      ],
+      "pypi": "https://pypi.org/project/torch/2.8.0/",
+      "copied_license_files": [
+        "third_party_licenses/torch/LICENSE",
+        "third_party_licenses/torch/NOTICE"
+      ]
+    },
+    {
+      "name": "torchvision",
+      "version": "0.23.0+cpu",
+      "license_summary": "BSD-3-Clause",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "torchvision-0.23.0+cpu.dist-info/LICENSE"
+      ],
+      "project_urls": [],
+      "pypi": "https://pypi.org/project/torchvision/0.23.0/",
+      "copied_license_files": [
+        "third_party_licenses/torchvision/LICENSE"
+      ]
+    },
+    {
+      "name": "tqdm",
+      "version": "4.70.1",
+      "license_summary": "MPL-2.0 AND MIT",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "tqdm-4.70.1.dist-info/licenses/LICENCE"
+      ],
+      "project_urls": [
+        "homepage, https://tqdm.github.io",
+        "repository, https://github.com/tqdm/tqdm",
+        "changelog, https://tqdm.github.io/releases",
+        "wiki, https://github.com/tqdm/tqdm/wiki"
+      ],
+      "pypi": "https://pypi.org/project/tqdm/4.70.1/",
+      "copied_license_files": [
+        "third_party_licenses/tqdm/licenses/LICENCE"
+      ]
+    },
+    {
+      "name": "transformers",
+      "version": "4.44.2",
+      "license_summary": "Apache-2.0",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "transformers-4.44.2.dist-info/LICENSE"
+      ],
+      "project_urls": [],
+      "pypi": "https://pypi.org/project/transformers/4.44.2/",
+      "copied_license_files": [
+        "third_party_licenses/transformers/LICENSE"
+      ]
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "license_summary": "PSF-2.0",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "typing_extensions-4.16.0.dist-info/licenses/LICENSE"
+      ],
+      "project_urls": [
+        "Bug Tracker, https://github.com/python/typing_extensions/issues",
+        "Changes, https://github.com/python/typing_extensions/blob/main/CHANGELOG.md",
+        "Documentation, https://typing-extensions.readthedocs.io/",
+        "Home, https://github.com/python/typing_extensions",
+        "Q & A, https://github.com/python/typing/discussions",
+        "Repository, https://github.com/python/typing_extensions"
+      ],
+      "pypi": "https://pypi.org/project/typing_extensions/4.16.0/",
+      "copied_license_files": [
+        "third_party_licenses/typing-extensions/licenses/LICENSE"
+      ]
+    },
+    {
+      "name": "urllib3",
+      "version": "2.8.0",
+      "license_summary": "MIT",
+      "source_of_summary": "Installed metadata and bundled original notices; binary distribution obligations depend on the shipped components.",
+      "license_files": [
+        "urllib3-2.8.0.dist-info/licenses/LICENSE.txt"
+      ],
+      "project_urls": [
+        "Changelog, https://github.com/urllib3/urllib3/blob/main/CHANGES.rst",
+        "Documentation, https://urllib3.readthedocs.io",
+        "Code, https://github.com/urllib3/urllib3",
+        "Issue tracker, https://github.com/urllib3/urllib3/issues",
+        "Security policy, https://urllib3.readthedocs.io/en/latest/security.html"
+      ],
+      "pypi": "https://pypi.org/project/urllib3/2.8.0/",
+      "copied_license_files": [
+        "third_party_licenses/urllib3/licenses/LICENSE.txt"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+.venv/
+__pycache__/
+*.log
+
+# Local copies, build outputs, OCR weights, and private configuration.
+backup/
+dist/
+build/
+*.spec
+.env
+.env.*
+!.env.example
+*.ini
+*.reg
+*.pem
+*.key
+*.pth
+*.pt
+*.onnx
+*.gguf
+*.safetensors
+*.traineddata
+.EasyOCR/
+models/
+*.part
+secrets/
+credentials*.json
+.publish-audit/
+
+# Keep local working documents out of source releases.
+/*.md
+!/README.md
+!/SUPPORTED_LANGUAGES.md
+!/RIGHTS_AND_ATTRIBUTION.md
+!/THIRD_PARTY_NOTICES.md
