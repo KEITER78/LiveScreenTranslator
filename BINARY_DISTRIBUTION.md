@@ -73,7 +73,7 @@ Windows配布版をビルドする場合は、次を実行します。
 ```powershell
 .\.build-venv\Scripts\python.exe -m unittest discover -s tests -v
 .\.build-venv\Scripts\python.exe build_release.py --build-only
-.\.build-venv\Scripts\python.exe packaging_licenses.py --bundle dist/LiveScreenTranslator-windows-x64 --python-runtime .runtime/python --release-tag v1.0.0
+.\.build-venv\Scripts\python.exe packaging_licenses.py --bundle dist/LiveScreenTranslator-windows-x64 --python-runtime .runtime/python --release-tag v1.0.1
 .\.build-venv\Scripts\python.exe build_release.py --package-only
 ```
 

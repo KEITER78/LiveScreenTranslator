@@ -1,6 +1,6 @@
 # 権利表示と再配布条件
 
-対象: LiveScreenTranslator v1.0.0（Windows x64）。更新日: 2026-10-29。
+対象: LiveScreenTranslator v1.0.1（Windows x64）。更新日: 2026-10-29。
 
 ## 本体
 

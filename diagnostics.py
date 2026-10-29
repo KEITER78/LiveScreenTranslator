@@ -92,6 +92,15 @@ def run_self_test(report_filename, prepare=False):
                 results.append({'source': source, 'target': target, 'output': translated})
             assert '窓' in results[0]['output']
             report['translations'] = results
+            wrapped_results = []
+            for wrapped in ('You should go to\nthe store.',
+                            'You should go to\nthe store to buy\nsome milk.'):
+                translated = translator.translate(wrapped, 'en', 'ja')
+                continuous = translator.translate(' '.join(wrapped.splitlines()), 'en', 'ja')
+                assert translated == continuous, (wrapped, translated, continuous)
+                assert translated.strip() and '\n' not in translated
+                wrapped_results.append({'input': wrapped, 'output': translated})
+            report['wrapped_translations'] = wrapped_results
 
         ocr = window.ocr
         if ocr.is_ready('en', 'EasyOCR'):

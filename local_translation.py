@@ -6,6 +6,21 @@ import re
 from languages import validate_pair
 from prepare_translation import MODEL_DIR, model_ready
 
+
+def _paragraphs(text):
+    """Join visual line wraps; only a blank line ends a paragraph."""
+    lines = []
+    for line in text.splitlines():
+        line = line.strip()
+        if line:
+            lines.append(line)
+        elif lines:
+            yield ' '.join(lines)
+            lines = []
+    if lines:
+        yield ' '.join(lines)
+
+
 class LocalTranslator:
     def __init__(self, model_dir=MODEL_DIR):
         self.model_dir = Path(model_dir)
@@ -30,10 +45,7 @@ class LocalTranslator:
             return text
         self.load()
         output = []
-        for paragraph in text.splitlines():
-            if not paragraph.strip():
-                output.append('')
-                continue
+        for paragraph in _paragraphs(text):
             # Bound memory without silently truncating long screen text.
             pieces = self.processor.encode(paragraph, out_type=str)
             translated = []
@@ -46,4 +58,4 @@ class LocalTranslator:
                           and t not in ('</s>', '<s>', '<pad>')]
                 translated.append(self.processor.decode(result))
             output.append(' '.join(translated))
-        return '\n'.join(output)
+        return '\n\n'.join(output)
