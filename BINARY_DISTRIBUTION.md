@@ -36,7 +36,6 @@ NumPy・SciPy等のGCCランタイムにはGCC Runtime Library Exceptionが適�
 PyInstallerブートローダーの原文と、アプリケーション配布のための例外も保持します。
 
 CPU版のCTranslate2はCUDA / cuDNNを無効にしてビルドします。
-元のWindows wheelに含まれるNVIDIA cuDNNは、このCPU版の実行ファイルへ同梱しません。
 CPUバックエンドにリンクしたIntel MKLには、原文のIntel Simplified Software Licenseが適用されます。
 MKLのバイナリは改変せずに使用し、著作権表示・許諾文を `licenses/` に保持します。
 PyTorchに含まれるIntel OpenMP 2025.2.0にはIntel Developer Tools EULAが適用されます。
@@ -47,11 +46,11 @@ Windows版Pythonに含まれるMicrosoft Distributable Codeの条件も同ファ
 OS付属フォントは参照して使用し、フォントファイルを同梱しません。
 対応ソースZIPに含まれる各上流ソースにも、それぞれの原文ライセンスが適用されます。
 
-## ビルド時の検査
+## ソースからの実行・ビルド
 
 ビルドにはWindows x64、Git、Visual StudioのC++ x64ビルドツールとWindows SDKを使用します。
 配布版のPythonはAstral python-build-standaloneのCPython 3.12.16（20261026版）です。
-ビルド用ランタイムは以下の固定URLとSHA-256で取得できます。これは利用者がインストールする手順ではなく、配布者の再ビルド手順です。
+ソースを取得したフォルダーで、以下の固定URLとSHA-256を使って専用環境を用意します。
 
 ```powershell
 New-Item -ItemType Directory -Force .runtime | Out-Null
@@ -61,6 +60,17 @@ tar -xzf .runtime/python.tar.gz -C .runtime
 .\.runtime\python\python.exe -m venv .build-venv
 .\.build-venv\Scripts\python.exe -m pip install -r requirements-lock.txt -r requirements-build.txt
 .\.build-venv\Scripts\python.exe build_cpu_backend.py --install
+```
+
+ソースからアプリを起動する場合は、次を実行します。
+
+```powershell
+.\.build-venv\Scripts\python.exe main.py
+```
+
+Windows配布版をビルドする場合は、次を実行します。
+
+```powershell
 .\.build-venv\Scripts\python.exe -m unittest discover -s tests -v
 .\.build-venv\Scripts\python.exe build_release.py --build-only
 .\.build-venv\Scripts\python.exe packaging_licenses.py --bundle dist/LiveScreenTranslator-windows-x64 --python-runtime .runtime/python --release-tag v1.0.0

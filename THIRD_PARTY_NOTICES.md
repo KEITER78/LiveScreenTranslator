@@ -14,7 +14,7 @@
 
 ## 固定版パッケージ
 
-以下にはモデル準備用の Transformers も含みます。翻訳の実行は CTranslate2 + SentencePiece で行い、チャットモデルや外部翻訳 API は使いません。pytesseract も依存一覧に含まれますが、Tesseract 呼出しは引数を正確に渡すため直接行います。
+モデル準備に使用するTransformersを含む、依存パッケージの固定版と許諾文を以下に示します。
 
 44 パッケージ（pip / setuptools を除く）。原文ファイルの一覧は [dependency-licenses.json](dependency-licenses.json) にあります。
 
