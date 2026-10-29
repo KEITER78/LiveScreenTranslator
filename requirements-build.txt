@@ -1,0 +1,17 @@
+# Install after requirements-lock.txt in the build environment.
+PyInstaller==6.22.3
+pyinstaller-hooks-contrib==2026.9
+setuptools==80.9.0
+wheel==0.48.0
+cmake==4.4.4
+ninja==1.13.2
+pybind11==2.11.1
+mkl-static==2026.1.0
+mkl-include==2026.1.0
+onemkl-license==2026.1.0
+intel-openmp==2025.2.0
+intel-cmplr-lib-ur==2025.2.0
+umf==0.11.0
+tbb-devel==2023.2.0
+tbb==2023.2.0
+tcmlib==1.6.0

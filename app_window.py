@@ -1,15 +1,17 @@
 # Copyright (c) 2026 KEITER78
 from PIL import ImageGrab
-from PySide6.QtCore import QRect, QSettings, QThread, QTimer, Signal
+from PySide6.QtCore import QRect, QThread, QTimer, Qt, Signal
 from PySide6.QtGui import QFont
 from PySide6.QtWidgets import (QWidget, QPushButton, QVBoxLayout, QHBoxLayout,
     QLabel, QTextEdit, QComboBox, QMessageBox, QFontDialog, QCheckBox, QSpinBox)
 
 from languages import LANGUAGES
+from app_paths import application_settings as QSettings
 from local_translation import LocalTranslator
 from ocr_service import OcrService
 from prepare_translation import MODEL_DIR, model_ready, prepare
 from overlays import SelectionOverlay, TranslationOverlay
+from setup_dialog import SetupDialog
 
 
 class TranslationTask(QThread):
@@ -46,7 +48,7 @@ class TranslationTask(QThread):
             if not text or key == self.previous:
                 self.result.emit(None)
                 return
-            self.report('ローカルで翻訳中…')
+            self.report('翻訳中…')
             translated = self.translator.translate(text, self.source, self.target)
             self.report('翻訳完了')
             self.result.emit((key, text, translated))
@@ -64,6 +66,8 @@ class MainWindow(QWidget):
         self.resize(670, 780)
         self.translator, self.ocr = LocalTranslator(), OcrService()
         self.worker = None
+        self.setup_dialog = None
+        self.first_show = True
         self.generation = 0
         self.running = False
         self.closing = False
@@ -87,9 +91,13 @@ class MainWindow(QWidget):
         language_row.addWidget(self.swap_button)
         language_row.addWidget(QLabel('翻訳先'))
         language_row.addWidget(self.target_combo, 1)
-        self.prepare_button = QPushButton('翻訳モデルを準備（初回 約1.95GB）')
-        self.status_label = QLabel('CPUで動作します。GPU・APIキーは不要です。')
+        self.prepare_button = QPushButton('初回セットアップ')
+        self.setup_button = QPushButton('セットアップ…')
+        self.setup_button.setFlat(True)
+        self.status_label = QLabel('')
+        self.status_label.setTextFormat(Qt.PlainText)
         self.status_label.setWordWrap(True)
+        self.status_label.hide()
         self.select_button = QPushButton('翻訳範囲を選択')
         self.coords_label = QLabel('範囲が選択されていません')
         self.ocr_combo = QComboBox()
@@ -112,7 +120,6 @@ class MainWindow(QWidget):
         self.translation_result_label = QLabel('翻訳結果')
 
         layout = QVBoxLayout(self)
-        layout.addWidget(QLabel('ローカル翻訳・100言語対応（M2M100 INT8）'))
         layout.addLayout(language_row)
         layout.addWidget(self.prepare_button)
         layout.addWidget(self.status_label)
@@ -135,7 +142,11 @@ class MainWindow(QWidget):
         layout.addWidget(self.translate_button)
         layout.addWidget(self.translation_result_label)
         layout.addWidget(self.translation_result_text, 1)
-        layout.addWidget(self.reset_button)
+        footer = QHBoxLayout()
+        footer.addWidget(self.setup_button)
+        footer.addStretch()
+        footer.addWidget(self.reset_button)
+        layout.addLayout(footer)
 
         self.load_settings()
         self.source_combo.currentIndexChanged.connect(self.language_changed)
@@ -143,6 +154,7 @@ class MainWindow(QWidget):
         self.ocr_combo.currentIndexChanged.connect(self.language_changed)
         self.swap_button.clicked.connect(self.swap_languages)
         self.prepare_button.clicked.connect(self.prepare_model)
+        self.setup_button.clicked.connect(self.open_setup)
         self.select_button.clicked.connect(self.open_selection_overlay)
         self.start_button.clicked.connect(self.start_auto_capture)
         self.stop_button.clicked.connect(self.stop_auto_capture)
@@ -155,8 +167,52 @@ class MainWindow(QWidget):
 
     def update_model_status(self):
         ready = model_ready()
-        self.prepare_button.setText('翻訳モデルは準備済み' if ready else '翻訳モデルを準備（初回 約1.95GB）')
+        self.prepare_button.setVisible(not ready)
         self.prepare_button.setEnabled(not ready and self.worker is None)
+        self.setup_button.setEnabled(self.worker is None and self.setup_dialog is None)
+
+    def set_status(self, text=''):
+        self.status_label.setText(text)
+        self.status_label.setVisible(bool(text))
+
+    def showEvent(self, event):
+        super().showEvent(event)
+        if self.first_show:
+            self.first_show = False
+            QTimer.singleShot(0, self.offer_first_run_setup)
+
+    def offer_first_run_setup(self):
+        if not self.closing and self.isVisible() and not model_ready():
+            self.open_setup()
+
+    def open_setup(self):
+        if self.setup_dialog is not None:
+            self.setup_dialog.raise_()
+            self.setup_dialog.activateWindow()
+            return
+        if self.worker is not None:
+            self.set_status('現在の処理が終わってからセットアップを開いてください。')
+            return
+        self.stop_auto_capture()
+        self.setup_dialog = SetupDialog(self.ocr, self.source_combo.currentData(),
+            self.ocr_combo.currentText(), self)
+        self.setup_dialog.setup_finished.connect(self.setup_completed)
+        self.setup_dialog.finished.connect(self.setup_closed)
+        self.update_model_status()
+        self.setup_dialog.open()
+
+    def setup_completed(self, engine, include_ocr):
+        if include_ocr:
+            self.ocr_combo.setCurrentText(engine)
+        self.set_status()
+        self.update_model_status()
+
+    def setup_closed(self):
+        dialog, self.setup_dialog = self.setup_dialog, None
+        dialog.deleteLater()
+        self.update_model_status()
+        if self.closing:
+            QTimer.singleShot(0, self.close)
 
     def load_settings(self):
         old = QSettings('YourCompany', 'LiveScreenTranslator')
@@ -175,7 +231,7 @@ class MainWindow(QWidget):
         if rect and len(rect) == 4:
             self.on_region_selected(QRect(*map(int, rect)))
         self.interval_spinbox.setValue(settings.value('update_interval', 1000, type=int))
-        self.ocr_combo.setCurrentIndex(settings.value('ocr_engine_index', 0, type=int))
+        self.ocr_combo.setCurrentIndex(settings.value('ocr_engine_index', 1, type=int))
         self.overlay_checkbox.setChecked(settings.value('overlay_enabled', False, type=bool))
         font = settings.value('overlay_font')
         if font:
@@ -202,7 +258,7 @@ class MainWindow(QWidget):
         self.previous = None
         self.translation_result_text.clear()
         self.translation_overlay.setText('')
-        self.status_label.setText('言語を変更しました。読み取り言語も翻訳元に合わせます。')
+        self.set_status()
 
     def swap_languages(self):
         source, target = self.source_combo.currentData(), self.target_combo.currentData()
@@ -210,7 +266,7 @@ class MainWindow(QWidget):
         self.target_combo.setCurrentIndex(self.target_combo.findData(source))
 
     def launch_task(self, **kwargs):
-        if self.worker is not None:
+        if self.worker is not None or self.setup_dialog is not None:
             return False
         generation = self.generation
         worker = TranslationTask(self.translator, self.ocr,
@@ -219,7 +275,8 @@ class MainWindow(QWidget):
         self.worker = worker
         self.translate_button.setEnabled(False)
         self.prepare_button.setEnabled(False)
-        worker.progress.connect(lambda text: self.status_label.setText(text) if generation == self.generation else None)
+        self.setup_button.setEnabled(False)
+        worker.progress.connect(lambda text: self.set_status(text) if generation == self.generation else None)
         worker.result.connect(lambda result: self.receive_result(result, generation))
         worker.failed.connect(lambda message: self.receive_error(message, generation))
         worker.finished.connect(self.task_finished)
@@ -234,12 +291,12 @@ class MainWindow(QWidget):
             self.ocr_result_text.setPlainText(original)
             self.translation_result_text.setPlainText(translated)
             self.translation_overlay.setText(translated)
-        self.status_label.setText('自動翻訳中' if self.running else '準備完了')
+        self.set_status('自動翻訳中' if self.running else '')
 
     def receive_error(self, message, generation):
         if generation == self.generation and not self.closing:
             self.stop_auto_capture()
-            self.status_label.setText(message)
+            self.set_status(message)
             self.translation_result_text.setPlainText(f'処理できませんでした:\n{message}')
 
     def task_finished(self):
@@ -251,24 +308,32 @@ class MainWindow(QWidget):
             self.close()
 
     def prepare_model(self):
-        self.stop_auto_capture()
-        self.launch_task(preparing=True)
+        self.open_setup()
 
     def translate_text(self):
         if self.worker is not None:
+            return
+        if not model_ready():
+            self.open_setup()
             return
         self.stop_auto_capture()
         self.launch_task(text=self.ocr_result_text.toPlainText())
 
     def start_auto_capture(self):
+        if self.setup_dialog is not None:
+            self.open_setup()
+            return
         if self.worker is not None:
-            self.status_label.setText('現在の処理が終わるまでお待ちください。')
+            self.set_status('現在の処理が終わるまでお待ちください。')
             return
         if not model_ready():
-            self.status_label.setText('先に「翻訳モデルを準備」を押してください。')
+            self.open_setup()
+            return
+        if not self.ocr.is_ready(self.source_combo.currentData(), self.ocr_combo.currentText()):
+            self.open_setup()
             return
         if not self.target_rect or self.target_rect.isEmpty():
-            self.status_label.setText('先に翻訳範囲を選択してください。')
+            self.set_status('先に翻訳範囲を選択してください。')
             return
         self.running = True
         self.previous = None
@@ -287,6 +352,7 @@ class MainWindow(QWidget):
         self.translation_overlay.hide()
         self.start_button.setEnabled(True)
         self.stop_button.setEnabled(False)
+        self.set_status()
 
     def run_auto_capture(self):
         if not self.running or self.worker is not None:
@@ -324,7 +390,7 @@ class MainWindow(QWidget):
             self.stop_auto_capture()
             self.source_combo.setCurrentIndex(self.source_combo.findData('en'))
             self.target_combo.setCurrentIndex(self.target_combo.findData('ja'))
-            self.ocr_combo.setCurrentIndex(0)
+            self.ocr_combo.setCurrentIndex(1)
             self.interval_spinbox.setValue(1000)
             self.overlay_checkbox.setChecked(False)
             self.target_rect = None
@@ -333,9 +399,14 @@ class MainWindow(QWidget):
 
     def closeEvent(self, event):
         self.stop_auto_capture()
+        if self.setup_dialog is not None:
+            self.closing = True
+            self.setup_dialog.reject()
+            event.ignore()
+            return
         if self.worker is not None:
             self.closing = True
-            self.status_label.setText('処理を終了しています…')
+            self.set_status('処理を終了しています…')
             event.ignore()
             return
         self.save_settings()

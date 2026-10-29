@@ -1,4 +1,5 @@
 .venv/
+.build-venv/
 __pycache__/
 *.log
 
@@ -6,7 +7,10 @@ __pycache__/
 backup/
 dist/
 build/
+release/
+.runtime/
 *.spec
+!LiveScreenTranslator.spec
 .env
 .env.*
 !.env.example
@@ -33,3 +37,5 @@ credentials*.json
 !/SUPPORTED_LANGUAGES.md
 !/RIGHTS_AND_ATTRIBUTION.md
 !/THIRD_PARTY_NOTICES.md
+!/BINARY_DISTRIBUTION.md
+!/BINARY_TERMS.md

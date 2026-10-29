@@ -1,0 +1,9 @@
+{
+  "package": "mkl-static",
+  "version": "2026.1.0",
+  "source": "https://pypi.org/project/mkl-static/2026.1.0/",
+  "publisher_license_bytes_sha256": "7721633d0ddff43fae25ebfd405f8166a0ce730cbcec44f2f3ad9d5eb8ac9a6f",
+  "publisher_encoding": "utf-8",
+  "utf8_copy_sha256": "0958bcd1c47d6ab6e03e89ab1ccdbbcd5fcb2eb62e04ceeb5927f23ecb807ef3",
+  "conversion": "Character encoding only; terms unchanged."
+}

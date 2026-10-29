@@ -1,0 +1,29 @@
+{
+  "package": "intel-openmp",
+  "version": "2025.2.0",
+  "wheel": "intel_openmp-2025.2.0-py2.py3-none-win_amd64.whl",
+  "url": "https://files.pythonhosted.org/packages/bc/37/bab8e9283407798d8782f4d9b374436e51c7a297e1b6dc05073df550c010/intel_openmp-2025.2.0-py2.py3-none-win_amd64.whl",
+  "wheel_sha256": "1710356ae0db744ca028ed380759a2007548ad1819f743be9d675603cb127377",
+  "torch_dll_sha256": "d9d66ed25f1a0ea725fa3a41b22cfd5d182c19dbe4771d9c90ca02ad7466f6a1",
+  "matching_dll_from_intel_package": "intel_openmp-2025.2.0.data/data/Library/bin/libiomp5md.dll",
+  "notices": [
+    "third-party-programs.txt",
+    "LICENSE.txt"
+  ],
+  "notice_encodings": [
+    {
+      "file": "third-party-programs.txt",
+      "publisher_encoding": "utf-8",
+      "publisher_bytes_sha256": "f8ce918fe7311ce279e68380a2e233f8a42b1cd3dda8f4c48d6de97a0255c1d7",
+      "utf8_copy_sha256": "da81ee74b1d55accbcdc1c7b2ce9501364275e14adb12b98004dd51be195fdf8",
+      "conversion": "Character encoding only; terms and copyright text unchanged."
+    },
+    {
+      "file": "LICENSE.txt",
+      "publisher_encoding": "cp1252",
+      "publisher_bytes_sha256": "febfb69a5b058f55892dc7f341108a9ca29d50e9fe85723a57eebbb826436958",
+      "utf8_copy_sha256": "7f27dfebcd511e256ecc69f0d54b7d87cd584b39161bd862a578370b628a0009",
+      "conversion": "Character encoding only; terms and copyright text unchanged."
+    }
+  ]
+}

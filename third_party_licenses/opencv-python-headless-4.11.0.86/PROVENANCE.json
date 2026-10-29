@@ -1,0 +1,8 @@
+{
+  "package": "opencv-python-headless",
+  "version": "4.11.0.86",
+  "file": "LICENSE-3RD-PARTY.txt",
+  "sha256": "0b33c5be17819d10ecad11360c6f2bd5a7df7c0f80a3314a81e28070d93818e2",
+  "source": "Unmodified notice supplied in pinned installed publisher wheel: cv2/LICENSE-3RD-PARTY.txt",
+  "scope": "Includes vendor notice templates for other platforms/components; unused Windows FFmpeg DLL is excluded. Actual Intel IPP is2021.12.0, confirmed by build information and exact SDK."
+}

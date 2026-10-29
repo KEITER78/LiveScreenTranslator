@@ -1,6 +1,6 @@
 {
-  "audited_on": "2026-10-19",
-  "scope": "Local M2M100 INT8, source publication; installed runtime and model preparation dependencies. Binary bundles need a separate component audit.",
+  "audited_on": "2026-10-29",
+  "scope": "Local M2M100 source and Windows x64 release. Runtime dependencies are pinned below; the release uses CPython 3.12.16 and a CUDA/cuDNN-free CTranslate2 4.6.0+cpu build. Exact bundled native components, notices and corresponding-source access are recorded in BINARY_COMPONENTS.json, SOURCE_OFFER.md and licenses/ within each release.",
   "packages": [
     {
       "name": "certifi",
@@ -68,7 +68,10 @@
       "pypi": "https://pypi.org/project/ctranslate2/4.6.0/",
       "copied_license_files": [
         "third_party_licenses/ctranslate2/LICENSE"
-      ]
+      ],
+      "binary_release_version": "4.6.0+cpu",
+      "binary_build_script": "build_cpu_backend.py",
+      "binary_license_note": "CTranslate2 MIT; statically linked Intel oneMKL is governed by its included Intel Simplified Software License and third-party notices."
     },
     {
       "name": "easyocr",

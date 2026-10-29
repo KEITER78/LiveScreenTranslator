@@ -1,0 +1,288 @@
+{
+  "schema": 1,
+  "python_version": "3.12.16",
+  "qt_version": "6.9.2",
+  "geos_version": "3.13.1",
+  "sources": [
+    {
+      "component": "qtbase",
+      "version": "6.9.2",
+      "license": "LGPL-3.0-only",
+      "filename": "qtbase-everywhere-src-6.9.2.tar.xz",
+      "url": "https://download.qt.io/archive/qt/6.9/6.9.2/submodules/qtbase-everywhere-src-6.9.2.tar.xz",
+      "sha256": "44be9c9ecfe04129c4dea0a7e1b36ad476c9cc07c292016ac98e7b41514f2440",
+      "checksum_source": "Qt publisher .sha256 sidecar",
+      "bytes": 49812824
+    },
+    {
+      "component": "qtsvg",
+      "version": "6.9.2",
+      "license": "LGPL-3.0-only",
+      "filename": "qtsvg-everywhere-src-6.9.2.tar.xz",
+      "url": "https://download.qt.io/archive/qt/6.9/6.9.2/submodules/qtsvg-everywhere-src-6.9.2.tar.xz",
+      "sha256": "d984cab8f26334aa1c15e5b8f0cd9f1b7c0c1289fe0b68c1c84ab469b75605a5",
+      "checksum_source": "Qt publisher .sha256 sidecar",
+      "bytes": 2004052
+    },
+    {
+      "component": "qtimageformats",
+      "version": "6.9.2",
+      "license": "LGPL-3.0-only",
+      "filename": "qtimageformats-everywhere-src-6.9.2.tar.xz",
+      "url": "https://download.qt.io/archive/qt/6.9/6.9.2/submodules/qtimageformats-everywhere-src-6.9.2.tar.xz",
+      "sha256": "8a023f7e2f57dedc02e2ab10c975f7cb3cccac9b8f0823c12fd6824834549139",
+      "checksum_source": "Qt publisher .sha256 sidecar",
+      "bytes": 2021564
+    },
+    {
+      "component": "pyside-setup",
+      "version": "6.9.2",
+      "license": "LGPL-3.0-only",
+      "filename": "pyside-setup-everywhere-src-6.9.2.tar.xz",
+      "url": "https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.9.2-src/pyside-setup-everywhere-src-6.9.2.tar.xz",
+      "sha256": "9ec087465342bdc9dbe492a30e58fdbbc5448655deacf5982a0fe7123f59222d",
+      "checksum_source": "Qt publisher .sha256 sidecar",
+      "bytes": 16659400
+    },
+    {
+      "component": "geos",
+      "version": "3.13.1",
+      "license": "LGPL-2.1-or-later",
+      "filename": "geos-3.13.1.tar.bz2",
+      "url": "https://download.osgeo.org/geos/geos-3.13.1.tar.bz2",
+      "sha256": "df2c50503295f325e7c8d7b783aca8ba4773919cde984193850cf9e361dfd28c",
+      "bytes": 6839955
+    },
+    {
+      "component": "gcc-libquadmath",
+      "version": "10.3.0",
+      "license": "LGPL-2.1-or-later AND GPL-3.0-with-GCC-exception",
+      "filename": "gcc-10.3.0.tar.xz",
+      "url": "https://gcc.gnu.org/pub/gcc/releases/gcc-10.3.0/gcc-10.3.0.tar.xz",
+      "sha512": "2b2dd7453d48a398c29eaebd1422b70341001b8c90a62aee51e83344e7fdd8a8e45f82a4a9165bd7edc76dada912c932f4b6632c5636760fec4c5d7e402b3f86",
+      "checksum_source": "GCC publisher sha512.sum",
+      "sha256": "64f404c1a650f27fc33da242e1f2df54952e3963a49e06e73f6940f3223ac344",
+      "bytes": 76692288
+    },
+    {
+      "component": "openblas-numpy",
+      "version": "0.3.23-293-gc2f4bdbb",
+      "license": "BSD-3-Clause",
+      "filename": "OpenBLAS-c2f4bdbbb43a1d20a7342f40122e18e573ce436a.tar.gz",
+      "url": "https://codeload.github.com/OpenMathLib/OpenBLAS/tar.gz/c2f4bdbbb43a1d20a7342f40122e18e573ce436a",
+      "commit": "c2f4bdbbb43a1d20a7342f40122e18e573ce436a",
+      "sha256": "9c0f2b8d1f6839f8b0d1309417e06d38eabfa76ba52d9fe80f79df496d5afddc",
+      "bytes": 24274239
+    },
+    {
+      "component": "python-bidi",
+      "version": "0.6.11",
+      "license": "LGPL-3.0-or-later",
+      "filename": "python_bidi-0.6.11.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/ce/e7/f168f2c3151aa05b9f9c9b2f7767bc8e06a133ea822c231ab497d4f36833/python_bidi-0.6.11.tar.gz",
+      "sha256": "034090c597af250d699299d7e7f1e83eb016f9e47b3b707bd89ab2bdec77bce0",
+      "checksum_source": "PyPI python-bidi 0.6.11 metadata",
+      "bytes": 57647
+    },
+    {
+      "component": "certifi",
+      "version": "2026.10.18",
+      "license": "MPL-2.0",
+      "filename": "certifi-2026.10.18.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/7e/eb/a2aa1ac3ea30dd3f30ca57f40232138b6b0040719316ecb85daf61167771/certifi-2026.10.18.tar.gz",
+      "sha256": "b9995d97b64d0431a5af837d8ca8cd6238104d1f319f04bd93ea43124d6c861e",
+      "checksum_source": "PyPI certifi 2026.10.18 metadata",
+      "bytes": 135227
+    },
+    {
+      "component": "numpy",
+      "version": "1.26.4",
+      "license": "BSD-3-Clause",
+      "filename": "numpy-1.26.4.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/65/6e/09db70a523a96d25e115e71cc56a6f9031e7b8cd166c1ac8438307c14058/numpy-1.26.4.tar.gz",
+      "sha256": "2a02aba9ed12e4ac4eb3ea9421c420301a0c6460d9830d74a9df87efa4912010",
+      "checksum_source": "PyPI numpy 1.26.4 metadata",
+      "bytes": 15786129
+    },
+    {
+      "component": "shapely",
+      "version": "2.1.2",
+      "license": "BSD-3-Clause",
+      "filename": "shapely-2.1.2.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/4d/bc/0989043118a27cccb4e906a46b7565ce36ca7b57f5a18b78f4f1b0f72d9d/shapely-2.1.2.tar.gz",
+      "sha256": "2ed4ecb28320a433db18a5bf029986aa8afcfd740745e78847e330d5d94922a9",
+      "checksum_source": "PyPI shapely 2.1.2 metadata",
+      "bytes": 315489
+    },
+    {
+      "component": "pyinstaller",
+      "version": "6.22.3",
+      "license": "GPL-2.0-or-later WITH Bootloader-exception",
+      "filename": "pyinstaller-6.22.3.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/63/41/f90302845945abd4ed647933ff5ee7c6ac93983187be67f897b6cb613331/pyinstaller-6.22.3.tar.gz",
+      "sha256": "05eb2f5615503e72939a7224d68b4aff572c6b0438ee4a17d0a4b481f399362d",
+      "checksum_source": "PyPI pyinstaller 6.22.3 metadata",
+      "bytes": 4437180
+    },
+    {
+      "component": "rust-heck",
+      "version": "0.5.0",
+      "license": "Upstream crate license",
+      "filename": "heck-0.5.0.crate",
+      "url": "https://static.crates.io/crates/heck/heck-0.5.0.crate",
+      "sha256": "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea",
+      "checksum_source": "python-bidi Cargo.lock",
+      "bytes": 11517
+    },
+    {
+      "component": "rust-libc",
+      "version": "0.2.155",
+      "license": "Upstream crate license",
+      "filename": "libc-0.2.155.crate",
+      "url": "https://static.crates.io/crates/libc/libc-0.2.155.crate",
+      "sha256": "97b3888a4aecf77e811145cadf6eef5901f4782c53886191b2f693f24761847c",
+      "checksum_source": "python-bidi Cargo.lock",
+      "bytes": 743539
+    },
+    {
+      "component": "rust-once_cell",
+      "version": "1.21.3",
+      "license": "Upstream crate license",
+      "filename": "once_cell-1.21.3.crate",
+      "url": "https://static.crates.io/crates/once_cell/once_cell-1.21.3.crate",
+      "sha256": "42f5e15c9953c5e4ccceeb2e7382a716482c34515315f7b03532b8b4e8393d2d",
+      "checksum_source": "python-bidi Cargo.lock",
+      "bytes": 34534
+    },
+    {
+      "component": "rust-portable-atomic",
+      "version": "1.6.0",
+      "license": "Upstream crate license",
+      "filename": "portable-atomic-1.6.0.crate",
+      "url": "https://static.crates.io/crates/portable-atomic/portable-atomic-1.6.0.crate",
+      "sha256": "7170ef9988bc169ba16dd36a7fa041e5c4cbeb6a35b76d4c03daded371eae7c0",
+      "checksum_source": "python-bidi Cargo.lock",
+      "bytes": 140689
+    },
+    {
+      "component": "rust-proc-macro2",
+      "version": "1.0.86",
+      "license": "Upstream crate license",
+      "filename": "proc-macro2-1.0.86.crate",
+      "url": "https://static.crates.io/crates/proc-macro2/proc-macro2-1.0.86.crate",
+      "sha256": "5e719e8df665df0d1c8fbfd238015744736151d4445ec0836b8e628aae103b77",
+      "checksum_source": "python-bidi Cargo.lock",
+      "bytes": 48958
+    },
+    {
+      "component": "rust-pyo3",
+      "version": "0.29.0",
+      "license": "Upstream crate license",
+      "filename": "pyo3-0.29.0.crate",
+      "url": "https://static.crates.io/crates/pyo3/pyo3-0.29.0.crate",
+      "sha256": "cd274650b21d4bfc26a0a47587962c1edb425f69287324355cd040c3ea66071c",
+      "checksum_source": "python-bidi Cargo.lock",
+      "bytes": 1241253
+    },
+    {
+      "component": "rust-pyo3-build-config",
+      "version": "0.29.0",
+      "license": "Upstream crate license",
+      "filename": "pyo3-build-config-0.29.0.crate",
+      "url": "https://static.crates.io/crates/pyo3-build-config/pyo3-build-config-0.29.0.crate",
+      "sha256": "c5e2a7d2f0d013342f295c048ad19237add5154a55b1c5a254c0ec93d4109078",
+      "checksum_source": "python-bidi Cargo.lock",
+      "bytes": 39616
+    },
+    {
+      "component": "rust-pyo3-ffi",
+      "version": "0.29.0",
+      "license": "Upstream crate license",
+      "filename": "pyo3-ffi-0.29.0.crate",
+      "url": "https://static.crates.io/crates/pyo3-ffi/pyo3-ffi-0.29.0.crate",
+      "sha256": "ca85c467da1bbc8d866eea5deff9cf29ea5f7785054a17da36e65bda9c05845b",
+      "checksum_source": "python-bidi Cargo.lock",
+      "bytes": 88184
+    },
+    {
+      "component": "rust-pyo3-macros",
+      "version": "0.29.0",
+      "license": "Upstream crate license",
+      "filename": "pyo3-macros-0.29.0.crate",
+      "url": "https://static.crates.io/crates/pyo3-macros/pyo3-macros-0.29.0.crate",
+      "sha256": "9ac53762fd065daa3194dd09337a38bd793a188100fd1a9304c4ab312d901771",
+      "checksum_source": "python-bidi Cargo.lock",
+      "bytes": 8915
+    },
+    {
+      "component": "rust-pyo3-macros-backend",
+      "version": "0.29.0",
+      "license": "Upstream crate license",
+      "filename": "pyo3-macros-backend-0.29.0.crate",
+      "url": "https://static.crates.io/crates/pyo3-macros-backend/pyo3-macros-backend-0.29.0.crate",
+      "sha256": "4ca3a1557399783172dc5bf39cfca835157732532cba56b71d2292161e53b362",
+      "checksum_source": "python-bidi Cargo.lock",
+      "bytes": 91943
+    },
+    {
+      "component": "rust-quote",
+      "version": "1.0.45",
+      "license": "Upstream crate license",
+      "filename": "quote-1.0.45.crate",
+      "url": "https://static.crates.io/crates/quote/quote-1.0.45.crate",
+      "sha256": "41f2619966050689382d2b44f664f4bc593e129785a36d6ee376ddf37259b924",
+      "checksum_source": "python-bidi Cargo.lock",
+      "bytes": 31564
+    },
+    {
+      "component": "rust-syn",
+      "version": "2.0.70",
+      "license": "Upstream crate license",
+      "filename": "syn-2.0.70.crate",
+      "url": "https://static.crates.io/crates/syn/syn-2.0.70.crate",
+      "sha256": "2f0209b68b3613b093e0ec905354eccaedcfe83b8cb37cbdeae64026c3064c16",
+      "checksum_source": "python-bidi Cargo.lock",
+      "bytes": 266388
+    },
+    {
+      "component": "rust-target-lexicon",
+      "version": "0.13.3",
+      "license": "Upstream crate license",
+      "filename": "target-lexicon-0.13.3.crate",
+      "url": "https://static.crates.io/crates/target-lexicon/target-lexicon-0.13.3.crate",
+      "sha256": "df7f62577c25e07834649fc3b39fafdc597c0a3527dc1c60129201ccfcbaa50c",
+      "checksum_source": "python-bidi Cargo.lock",
+      "bytes": 28498
+    },
+    {
+      "component": "rust-unicode-bidi",
+      "version": "0.3.18",
+      "license": "Upstream crate license",
+      "filename": "unicode-bidi-0.3.18.crate",
+      "url": "https://static.crates.io/crates/unicode-bidi/unicode-bidi-0.3.18.crate",
+      "sha256": "5c1cb5db39152898a79168971543b1cb5020dff7fe43c8dc468b0885f5e29df5",
+      "checksum_source": "python-bidi Cargo.lock",
+      "bytes": 58300
+    },
+    {
+      "component": "rust-unicode-ident",
+      "version": "1.0.12",
+      "license": "Upstream crate license",
+      "filename": "unicode-ident-1.0.12.crate",
+      "url": "https://static.crates.io/crates/unicode-ident/unicode-ident-1.0.12.crate",
+      "sha256": "3354b9ac3fae1ff6755cb6db53683adb661634f67557942dea4facebec0fee4b",
+      "checksum_source": "python-bidi Cargo.lock",
+      "bytes": 42168
+    },
+    {
+      "component": "eigen",
+      "version": "3.4.0",
+      "license": "MPL-2.0 AND upstream third-party notices",
+      "filename": "eigen-3.4.0.tar.gz",
+      "url": "https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz",
+      "sha256": "8586084f71f9bde545ee7fa6d00288b264a2b7ac3607b974e54d13e7162c1c72",
+      "bytes": 2705005,
+      "provenance": "Original source referenced by CTranslate2 src/cpu/vec.h Eigen-derived math implementation."
+    }
+  ]
+}

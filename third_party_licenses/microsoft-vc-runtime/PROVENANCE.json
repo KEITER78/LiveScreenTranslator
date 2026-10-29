@@ -1,0 +1,12 @@
+{
+  "developer_license": {
+    "url": "https://visualstudio.microsoft.com/wp-content/uploads/2025/10/Visual_Studio_2026-License-Community_ENU.docx",
+    "sha256": "02ac07637f4a513a807cd3721c7620433fc483bc049d25784b0c10c54b05e1fb",
+    "text_extraction": "WordprocessingML paragraph text; original DOCX retained unmodified."
+  },
+  "redistributable_list": {
+    "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2026/redistribution",
+    "sha256": "f179e875ceaa92f6da5d8ffb3f4515965a89bce9b03fe9c40dbf9a0f48fe189e",
+    "permitted_runtime_directory": "[VisualStudioFolder]/VC/Redist; excluding debug_nonredist and preview components"
+  }
+}

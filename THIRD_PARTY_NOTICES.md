@@ -1,13 +1,13 @@
 # 第三者ソフトウェア通知
 
-確認日: 2026-10-19。対象はローカル M2M100 版の固定した専用環境です。本体の作者は KEITER78 で、第三者の権利は各権利者に帰属します。
+確認日: 2026-10-29。対象はローカルM2M100版とWindows x64配布版です。本体の作者はKEITER78で、第三者の権利は各権利者に帰属します。
 
 ## 翻訳モデル・OCR
 
 | 対象 | 許諾と表示 |
 | --- | --- |
 | M2M100 418M | Facebook, Inc. and its affiliates / MIT。[公式モデルカード](https://huggingface.co/facebook/m2m100_418M) と [元の許諾文](third_party_licenses/m2m100/LICENSE)。INT8 へ変換したモデルには取得元・版・改変内容を ready.json に記録。重みは GitHub のソースには含めない |
-| CTranslate2 4.6.0 | OpenNMT / MIT。[元の許諾文](third_party_licenses/ctranslate2/LICENSE)。実行用バイナリの内包部品は個別の条件にも従う |
+| CTranslate2 4.6.0 | OpenNMT / MIT。[元の許諾文](third_party_licenses/ctranslate2/LICENSE)。Windows配布版は `4.6.0+cpu` としてCUDA/cuDNNを無効化し、Intel oneMKLの逐次実行版を静的リンク。上流ソースと変更・ビルド手順を公開し、Intel部品の許諾文も配布ZIPに保持する |
 | Tesseract / tessdata_fast | Apache-2.0。[本体](https://github.com/tesseract-ocr/tesseract/blob/main/LICENSE) / [公式言語データ](https://github.com/tesseract-ocr/tessdata_fast/blob/4.1.0/LICENSE)。必要な言語データだけ公式 4.1.0 から取得。本体の実行ファイルは外部インストールを利用 |
 | EasyOCR 1.7.2 | Apache-2.0。[元の許諾文](third_party_licenses/easyocr/LICENSE)。選択時だけ初期化。認識モデルは利用者の環境で初回取得し、ソース配布には同梱しない |
 | PySide6 / Qt / shiboken6 | 本アプリではQtCore・QtGui・QtWidgetsをLGPLv3の条件で利用。[LGPLv3原文](third_party_licenses/common/LGPL-3.0.txt) / [参照するGPLv3原文](third_party_licenses/common/GPL-3.0.txt) / [Qtの案内](https://www.qt.io/development/open-source-lgpl-obligations) / [上流ソースと補足](third_party_licenses/README.md) |
@@ -65,4 +65,4 @@
 | [typing_extensions](https://pypi.org/project/typing_extensions/4.16.0/) | 4.16.0 | PSF-2.0 | [原文](third_party_licenses/typing-extensions/licenses/) |
 | [urllib3](https://pypi.org/project/urllib3/2.8.0/) | 2.8.0 | MIT | [原文](third_party_licenses/urllib3/licenses/) |
 
-概要は各原文の代替ではありません。実行ファイル配布では、Qt・GEOS・数値ライブラリ・OpenMP等の同梱部品、LGPL / MPLのソース入手・差し替え等の義務を、実際の配布物に合わせて確認します。字体はOSのフォントを参照し、フォントファイルは同梱しません。
+概要は各原文の代替ではありません。配布版にはCPython 3.12.16、PyInstallerブートローダー、Qt、GEOS、数値計算・画像処理ライブラリ、Microsoft VC++ランタイム等も含みます。各部品の原文とファイル一覧は配布ZIPの `licenses/` と `BINARY_COMPONENTS.json` に、対応ソースの入手先と差し替え方法は `SOURCE_OFFER.md` と[バイナリ配布の説明](BINARY_DISTRIBUTION.md)に記載します。字体はOSのフォントを参照し、フォントファイルは同梱しません。

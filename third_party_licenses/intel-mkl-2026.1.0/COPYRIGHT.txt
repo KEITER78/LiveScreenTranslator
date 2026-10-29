@@ -1,0 +1,4 @@
+Intel(R) oneAPI Math Kernel Library (oneMKL)
+Copyright (C) 1999 Intel Corporation
+
+Original copyright notice retained from the mkl.h interface distributed with Intel oneMKL 2026.1.0.

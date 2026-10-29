@@ -1,0 +1,2 @@
+# Preserve upstream license/notices byte-for-byte, including original encodings.
+third_party_licenses/** -text
